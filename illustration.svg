@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 510 410" role="img" aria-label="Illustration of a remote video conversation">
+  <defs><linearGradient id="wash" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#eaecff"/><stop offset="1" stop-color="#f9fafc"/></linearGradient></defs>
+  <path d="M62 300c-29-91 2-184 86-207 79-22 111 38 172 32 67-6 108 34 105 111-2 68-42 129-141 143-117 18-194-3-222-79Z" fill="url(#wash)"/>
+  <circle cx="91" cy="82" r="5" fill="#c2cbff"/><circle cx="116" cy="82" r="5" fill="#c2cbff"/><circle cx="141" cy="82" r="5" fill="#c2cbff"/>
+  <rect x="151" y="100" width="285" height="195" rx="18" fill="#202858"/><rect x="160" y="109" width="267" height="168" rx="10" fill="#f7f8ff"/>
+  <path d="M162 232h264v43H162z" fill="#333d89"/><rect x="265" y="295" width="60" height="17" rx="5" fill="#aab3df"/><rect x="224" y="310" width="140" height="10" rx="5" fill="#29336e"/>
+  <circle cx="229" cy="171" r="29" fill="#f2ae82"/><path d="M202 169c-4-30 15-42 33-35 16 5 23 19 20 35-8-14-18-19-34-18-7 12-13 17-19 18Z" fill="#252b58"/><path d="M178 233c5-30 20-43 51-43 28 0 44 15 49 43" fill="#4555dc"/>
+  <circle cx="339" cy="166" r="27" fill="#dca280"/><path d="M312 166c0-27 13-39 29-39s27 14 25 39c-12-15-30-18-54 0Z" fill="#222855"/><path d="M291 232c5-31 23-44 49-44 28 0 42 13 47 44" fill="#6474e8"/>
+  <rect x="320" y="244" width="36" height="6" rx="3" fill="#e1e5ff"/><rect x="217" y="244" width="30" height="6" rx="3" fill="#e1e5ff"/>
+  <path d="M40 351c24-72 53-90 96-68 26 13 37 43 41 68" fill="#3e4ac1"/><circle cx="106" cy="243" r="35" fill="#e2a176"/><path d="M72 238c-5-25 6-44 26-47 22-4 38 12 42 34-26-12-48-8-68 13Z" fill="#1d2554"/><path d="M160 281c11 7 25 6 41-5" stroke="#e2a176" stroke-width="14" stroke-linecap="round" fill="none"/><path d="M207 272l10-18m-16 18 5-24m-14 26-2-23" stroke="#e2a176" stroke-width="6" stroke-linecap="round"/>
+  <rect x="39" y="350" width="448" height="16" rx="8" fill="#313974"/><path d="M445 348c7-20 3-44-6-62m5 52c3-20 17-27 22-41" stroke="#6d9d94" stroke-width="5" stroke-linecap="round" fill="none"/><path d="M438 306c-16-18-23-6-8 7m21 11c17-15 26-4 6 8" fill="#a9c9c4"/>
+  <rect x="345" y="52" width="90" height="50" rx="13" fill="#4555dc"/><circle cx="369" cy="77" r="4" fill="white"/><circle cx="389" cy="77" r="4" fill="white"/><circle cx="409" cy="77" r="4" fill="white"/>
+</svg>
