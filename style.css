@@ -11,3 +11,46 @@ body { background: #fff; }
 .standalone-closing { padding: 15px 32px; text-align: center; font-size: 11px; color: #656b80; }
 [hidden] { display: none !important; }
 @media(max-width:750px){ .site-inner { padding: 0 24px; } .concept-bar { margin: 0; } .topics { margin: 0 -24px; padding-left: 24px; padding-right: 24px; } }
+
+/* ---- Motion layer: subtle entrance, scroll reveals, hover and accordion transitions ----
+   Timing echoes the Figma prototype: smart-animate, gentle ease, ~1.2s, 300ms delay. */
+:root { --ease-gentle: cubic-bezier(.22,.61,.36,1); --dur-in: 1.2s; }
+
+.nav a, .nav-cta, .button-primary, .button-outline, .menu-toggle, .site footer a { transition: color .25s var(--ease-gentle), background-color .25s var(--ease-gentle), transform .25s var(--ease-gentle), box-shadow .25s var(--ease-gentle); }
+.nav-cta span, .button-primary span { display: inline-block; transition: transform .3s var(--ease-gentle); }
+.nav-cta:hover span, .button-primary:hover span { transform: translate(3px,-3px); }
+.button-primary:hover { transform: translateY(-2px); box-shadow: 0 14px 26px rgba(255,113,57,.24); }
+.button-primary:active, .nav-cta:active, .button-outline:active { transform: translateY(0) scale(.98); }
+.topic-card { transition: transform .35s var(--ease-gentle), box-shadow .35s var(--ease-gentle), border-color .35s var(--ease-gentle); }
+.topic-card:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(43,51,107,.1); border-color: #dfe3f6; }
+.topic-icon { transition: transform .35s var(--ease-gentle); }
+.topic-card:hover .topic-icon { transform: translate(3px,-3px); }
+.form-fields input { transition: border-color .25s var(--ease-gentle), box-shadow .25s var(--ease-gentle), background-color .25s var(--ease-gentle); }
+.faq-item button { transition: color .25s var(--ease-gentle); }
+.faq-item button:hover { color: #4352cf; }
+.faq-plus { display: inline-block; transition: transform .3s var(--ease-gentle); }
+.faq-item button[aria-expanded="true"] .faq-plus { transform: rotate(180deg); }
+.faq-item p { overflow: hidden; }
+.nav.is-open { animation: navIn .3s var(--ease-gentle); }
+@keyframes navIn { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: none; } }
+.success:not([hidden]), #demo-form:not([hidden]) { animation: fadeUp .6s var(--ease-gentle); }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+
+/* Entrance and scroll reveal (only when JS is on and motion is allowed) */
+.js .reveal { opacity: 0; transform: translateY(26px); transition: opacity var(--dur-in) var(--ease-gentle), transform var(--dur-in) var(--ease-gentle); transition-delay: var(--d, 0ms); }
+.js .reveal.is-in { opacity: 1; transform: none; }
+.js .hero-art.reveal { transform: scale(1.05); filter: blur(14px); transition: opacity var(--dur-in) var(--ease-gentle), transform 1.6s var(--ease-gentle), filter 1.6s var(--ease-gentle); transition-delay: var(--d, 0ms); }
+.js .hero-art.reveal.is-in { transform: none; filter: blur(0); }
+.js .visual-note.reveal { transform: translateY(18px) scale(.96); }
+.js .visual-note.reveal.is-in { transform: none; }
+.hero-visual.is-settled .visual-note { animation: bob 6s ease-in-out infinite; }
+@keyframes bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+.js .section-rule.reveal { transform: none; }
+.js .eyebrow-line { transition: width .9s var(--ease-gentle) .3s; }
+.js .reveal:not(.is-in) .eyebrow-line { width: 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; transition-delay: 0ms !important; }
+  .js .reveal, .js .hero-art.reveal { opacity: 1; transform: none; filter: none; }
+}
